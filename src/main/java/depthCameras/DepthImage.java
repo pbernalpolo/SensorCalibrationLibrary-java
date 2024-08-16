@@ -27,6 +27,15 @@ public interface DepthImage
     public int cols();
     
     
+    /**
+     * Checks if the pixel value represents an accurate enough distance measurement.
+     * <p>
+     * This method should return false if the pixel is saturated.
+     * 
+     * @param i     x-coordinate of the pixel.
+     * @param j     y-coordinate of the pixel.
+     * @return  true if the pixel value represents an accurate enough distance measurement; false otherwise.
+     */
     public boolean checkPixel( int i , int j );
     
     

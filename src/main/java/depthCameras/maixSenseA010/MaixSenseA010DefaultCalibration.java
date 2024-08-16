@@ -37,9 +37,6 @@ public class MaixSenseA010DefaultCalibration
      */
     private static final double FOV_V = 60 * Math.PI/180.0;
     
-    private int imageRowsCols;
-    
-    
     
     ////////////////////////////////////////////////////////////////
     // PRIVATE DERIVED CONSTANTS
@@ -58,15 +55,36 @@ public class MaixSenseA010DefaultCalibration
     
     
     ////////////////////////////////////////////////////////////////
+    // PUBLIC VARIABLES
+    ////////////////////////////////////////////////////////////////
+    
+    /**
+     * Number of rows or columns of the square image that provides the depth values.
+     */
+    private int imageRowsCols;
+    
+    
+    
+    ////////////////////////////////////////////////////////////////
     // PUBLIC METHODS
     ////////////////////////////////////////////////////////////////
     
+    /**
+     * Sets the number of rows or columns of the square image that provides the depth values.
+     * <p>
+     * Since MaixSenseA010Image are always square images, the input argument is the number of pixels along a side of the image.
+     * 
+     * @param numberOfRowsAndColumns    rows or columns of the square image that provides the depth values.
+     */
     public void setImageSize( int numberOfRowsAndColumns )
     {
         this.imageRowsCols = numberOfRowsAndColumns;
     }
     
     
+    /**
+     * {@inheritDoc}
+     */
     public Vector3 pixelToPoint3( double i , double j , double depthValue )
     {
         Vector3 output = new Vector3(
@@ -78,17 +96,26 @@ public class MaixSenseA010DefaultCalibration
     }
     
     
+    /**
+     * {@inheritDoc}
+     */
     public void setParameters( Matrix theta )
     {
     }
-
-
+    
+    
+    /**
+     * {@inheritDoc}
+     */
     public int numberOfParameters()
     {
         return 0;
     }
-
-
+    
+    
+    /**
+     * {@inheritDoc}
+     */
     public Matrix getParameters()
     {
         return null;
