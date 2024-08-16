@@ -29,6 +29,7 @@
 	<classpathentry kind="src" path="examples"/>
 	<classpathentry excluding="main/java/|main/resources/|test/java/|test/resources/" kind="src" path="src"/>
 	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="src" path="lib/OpenNumericalLibrary-java/src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="module" value="true"/>
