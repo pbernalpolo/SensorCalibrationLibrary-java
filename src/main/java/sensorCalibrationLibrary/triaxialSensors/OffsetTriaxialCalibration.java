@@ -1,4 +1,4 @@
-package triaxial;
+package sensorCalibrationLibrary.triaxialSensors;
 
 
 import java.io.BufferedReader;

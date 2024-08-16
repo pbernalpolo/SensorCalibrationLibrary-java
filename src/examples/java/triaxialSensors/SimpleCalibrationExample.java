@@ -1,8 +1,11 @@
-package triaxial;
+package triaxialSensors;
 
 
 import java.io.File;
 import java.util.Random;
+
+import sensorCalibrationLibrary.triaxialSensors.Bernal2019TriaxialCalibration;
+import sensorCalibrationLibrary.triaxialSensors.Bernal2019TriaxialCalibrator;
 
 
 

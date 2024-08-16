@@ -1,4 +1,4 @@
-package depthCameras;
+package sensorCalibrationLibrary.depthCameras;
 
 
 import java.util.ArrayList;
