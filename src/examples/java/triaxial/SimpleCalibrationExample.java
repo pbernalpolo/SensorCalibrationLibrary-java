@@ -1,6 +1,7 @@
 package triaxial;
 
 
+import java.io.File;
 import java.util.Random;
 
 
@@ -39,7 +40,8 @@ public class SimpleCalibrationExample
         calibrator.calibrate();
         
         Bernal2019TriaxialCalibration calibration = calibrator.getCalibration();
-        calibration.save( "calibration.cal" );
+        new File( "./data/output/" ).mkdirs();
+        calibration.save( "./data/output/calibration.cal" );
         
         
         // Obtain calibrated data.
