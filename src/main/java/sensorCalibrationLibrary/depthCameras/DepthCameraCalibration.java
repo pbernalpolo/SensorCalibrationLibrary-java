@@ -21,13 +21,13 @@ public interface DepthCameraCalibration
     /**
      * Returns the 3-dimensional position of the point projected into the pixel (i,j).
      * 
-     * @param i     x-coordinate of the pixel.
-     * @param j     y-coordinate of the pixel.
+     * @param xImagePlane     x-coordinate of the pixel.
+     * @param yImagePlane     y-coordinate of the pixel.
      * @param depthValue    depth value measured by the depth camera [m].
      * 
      * @return  3-dimensional position of the point projected into the pixel (i,j).
      */
-    public Vector3 pixelToPoint3( double i , double j , double depthValue );
+    public Vector3 pixelToPoint3( double xImagePlane , double yImagePlane , double depthValue );
     
     
     /**
@@ -72,7 +72,7 @@ public interface DepthCameraCalibration
                     // Take pixel.
                     double depthValue = image.depth( i , j );
                     // Build the RealVector3 from the (i,j)-th index and the depth value.
-                    Vector3 point = this.pixelToPoint3( i , j , depthValue );
+                    Vector3 point = this.pixelToPoint3( j , i , depthValue );
                     // Add the point to the point cloud.
                     pointCloud.add( point );
                 }
