@@ -1,7 +1,7 @@
 package sensorCalibrationLibrary.depthCameras.maixSenseA010;
 
 
-import numericalLibrary.types.Matrix;
+import numericalLibrary.types.MatrixReal;
 import numericalLibrary.types.Vector3;
 import sensorCalibrationLibrary.depthCameras.DepthCameraCalibration;
 
@@ -99,7 +99,7 @@ public class MaixSenseA010DefaultCalibration
     /**
      * {@inheritDoc}
      */
-    public void setParameters( Matrix theta )
+    public void setParameters( MatrixReal theta )
     {
     }
     
@@ -116,7 +116,7 @@ public class MaixSenseA010DefaultCalibration
     /**
      * {@inheritDoc}
      */
-    public Matrix getParameters()
+    public MatrixReal getParameters()
     {
         return null;
     }

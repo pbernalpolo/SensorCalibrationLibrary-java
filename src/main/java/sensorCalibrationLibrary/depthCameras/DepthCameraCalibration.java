@@ -4,7 +4,7 @@ package sensorCalibrationLibrary.depthCameras;
 import java.util.ArrayList;
 import java.util.List;
 
-import numericalLibrary.types.Matrix;
+import numericalLibrary.types.MatrixReal;
 import numericalLibrary.types.Vector3;
 
 
@@ -41,7 +41,7 @@ public interface DepthCameraCalibration
      * 
      * @param theta     column matrix that contains the coptimizable parameters to be set.
      */
-    public void setParameters( Matrix theta );
+    public void setParameters( MatrixReal theta );
     
     
     /**
@@ -49,7 +49,7 @@ public interface DepthCameraCalibration
      * 
      * @return  optimizable parameters used in the calibration model stored in a column matrix.
      */
-    public Matrix getParameters();
+    public MatrixReal getParameters();
     
     
     
