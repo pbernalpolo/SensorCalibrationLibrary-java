@@ -116,13 +116,14 @@ public class Bernal2019TriaxialCalibration
                 strValues = strLine.split(" ");
                 double[] theValues = new double[0];
                 for( int i=0; i<strValues.length; i++ ) {
-                    double nextDouble = Double.parseDouble( strValues[i] );
-                    double[] newValues = new double[theValues.length+1];
-                    for(int j=0; j<theValues.length; j++) {
-                        newValues[j] = theValues[j];
+                    try {
+                        double newDouble = Double.parseDouble( strValues[i] );
+                        double[] newValues = new double[theValues.length+1];
+                        for(int j=0; j<theValues.length; j++) newValues[j] = theValues[j];
+                        newValues[ theValues.length ] = newDouble;
+                        theValues = newValues;
+                    }catch( NumberFormatException e ){
                     }
-                    newValues[ theValues.length ] = nextDouble;
-                    theValues = newValues;
                 }
                 if( theValues.length != 9 ) throw new Exception( "TriaxialCalibration: wrong calibration." );
                 for(int i=0; i<9; i++) {
