@@ -4,7 +4,6 @@ package sensorCalibrationLibrary.depthCameras;
 import java.util.ArrayList;
 import java.util.List;
 
-import numericalLibrary.types.MatrixReal;
 import numericalLibrary.types.Vector3;
 
 
@@ -28,28 +27,6 @@ public interface DepthCameraCalibration
      * @return  3-dimensional position of the point projected into the pixel (i,j).
      */
     public Vector3 pixelToPoint3( double xImagePlane , double yImagePlane , double depthValue );
-    
-    
-    /**
-     * Returns the number of optimizable parameters used in the calibration model.
-     */
-    public int numberOfParameters();
-    
-    
-    /**
-     * Sets the optimizable parameters used in the calibration model.
-     * 
-     * @param theta     column matrix that contains the coptimizable parameters to be set.
-     */
-    public void setParameters( MatrixReal theta );
-    
-    
-    /**
-     * Returns the optimizable parameters used in the calibration model stored in a column matrix.
-     * 
-     * @return  optimizable parameters used in the calibration model stored in a column matrix.
-     */
-    public MatrixReal getParameters();
     
     
     
