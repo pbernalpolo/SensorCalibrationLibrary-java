@@ -91,7 +91,7 @@ public class MaixSenseA010DefaultCalibration
                 (xImagePlane-0.5*imageRowsCols)/imageRowsCols * X_SCREEN_SIZE_AT_1M ,
                 (yImagePlane-0.5*imageRowsCols)/imageRowsCols * Y_SCREEN_SIZE_AT_1M ,
                 1.0 );
-        output.scaleInplace( depthValue / output.norm() );
+        output.scaleInplace( depthValue );
         return output;
     }
     
