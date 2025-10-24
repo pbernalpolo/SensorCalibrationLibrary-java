@@ -48,7 +48,7 @@ public interface DepthCameraCalibration
                 if( image.checkPixel( i , j ) ) {
                     // Take pixel.
                     double depthValue = image.depth( i , j );
-                    // Build the RealVector3 from the (i,j)-th index and the depth value.
+                    // Build the Vector3 from the (i,j)-th index and the depth value.
                     Vector3 point = this.pixelToPoint3( j , i , depthValue );
                     // Add the point to the point cloud.
                     pointCloud.add( point );

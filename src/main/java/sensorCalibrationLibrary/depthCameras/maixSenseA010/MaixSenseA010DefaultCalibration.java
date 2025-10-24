@@ -87,7 +87,7 @@ public class MaixSenseA010DefaultCalibration
      */
     public Vector3 pixelToPoint3( double xImagePlane , double yImagePlane , double depthValue )
     {
-        Vector3 output = new Vector3(
+        Vector3 output = Vector3.fromComponents(
                 (xImagePlane-0.5*imageRowsCols)/imageRowsCols * X_SCREEN_SIZE_AT_1M ,
                 (yImagePlane-0.5*imageRowsCols)/imageRowsCols * Y_SCREEN_SIZE_AT_1M ,
                 1.0 );
